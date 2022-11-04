@@ -5,6 +5,8 @@ import {loadScript} from 'lightning/platformResourceLoader'
 export default class ThirdPartyFiles extends LightningElement {
   currentDate=''
   isLibLoaded = false
+
+  
   renderedCallback(){
       if(this.isLibLoaded){
           return
