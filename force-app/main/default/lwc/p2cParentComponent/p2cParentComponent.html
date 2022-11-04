@@ -1,0 +1,36 @@
+<template>
+    <c-alert-component
+    message=" Message pass from parrent"
+    child-header="Component Child Communication"
+    number=50
+    is-valid
+    ></c-alert-component>
+
+    <div class="slds-var-m-bottom_medium slds-m-around_x-small" >
+      <c-p2c-carousel-component
+      carousel-data={carouselDate}
+      ></c-p2c-carousel-component>
+    </div>
+
+    <!--- passing da from input field on the parent component  -->
+    <lightning-card  title= "Communication using progress bar">
+
+
+          <div class="slds-p-around_medium lgc-bg">
+              <lightning-input type="number" label="Enter Percentage" onkeyup={progressHandler}></lightning-input>
+          </div>
+          <c-p2c-progress-component
+          progress={progressDetail}
+          ></c-p2c-progress-component>
+
+
+          <lightning-button variant="brand" label="Reset slider" title="Primary action" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+          <c-p2c-slider-component></c-p2c-slider-component>
+
+
+
+
+      </lightning-card>
+
+
+</template>
